@@ -65,7 +65,6 @@ uint ET2046_ReadRaw(uchar cmd)
     adc_value = ET2046_SPI_Read12();
 
     ET2046_CS = 1;
-    ET2046_DIN = 1;
 
     return adc_value;
 }

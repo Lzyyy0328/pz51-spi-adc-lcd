@@ -141,16 +141,8 @@ static void App_FormatLine2(char *line, uint voltage_mv)
     line[11] = 'T';
     line[12] = 'O';
     line[13] = ':';
-    if (g_auto_mode)
-    {
-        line[14] = 'O';
-        line[15] = 'N';
-    }
-    else
-    {
-        line[14] = 'O';
-        line[15] = 'F';
-    }
+    line[14] = g_auto_mode ? '1' : '0';
+    line[15] = ' ';
 }
 
 static void App_RefreshLcd(void)
