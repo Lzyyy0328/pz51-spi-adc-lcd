@@ -1,0 +1,17 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+H:\普中HC6800-EM3 V3.0开发板资料\5--实验程序\基础实验例程\实验27：AD模数转换\外部输入AD值\template.uvproj
+Project File Date:  04/11/2016
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?SPI_START?XPT2046
+Program Size: data=16.0 xdata=0 code=439
+creating hex file from "template"...
+"template" - 0 Error(s), 1 Warning(s).
