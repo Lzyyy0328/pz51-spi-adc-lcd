@@ -18,6 +18,8 @@ static void ET2046_SPI_Write(uchar dat)
         _nop_();
         ET2046_CLK = 1;
     }
+
+    ET2046_CLK = 0;
 }
 
 static uint ET2046_SPI_Read12(void)

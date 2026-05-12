@@ -76,7 +76,7 @@ static uint App_ConvertToMv(uint adc_raw)
     ulong value;
 
     value = (ulong)adc_raw * (ulong)APP_VREF_MV;
-    value = (value + 2047ul) / 4095ul;
+    value = (value + (4095ul / 2ul)) / 4095ul;
 
     return (uint)value;
 }
@@ -141,8 +141,16 @@ static void App_FormatLine2(char *line, uint voltage_mv)
     line[11] = 'T';
     line[12] = 'O';
     line[13] = ':';
-    line[14] = 'O';
-    line[15] = g_auto_mode ? 'N' : 'F';
+    if (g_auto_mode)
+    {
+        line[14] = 'O';
+        line[15] = 'N';
+    }
+    else
+    {
+        line[14] = 'O';
+        line[15] = 'F';
+    }
 }
 
 static void App_RefreshLcd(void)
