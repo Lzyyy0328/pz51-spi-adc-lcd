@@ -9,7 +9,6 @@ static void ET2046_SPI_Write(uchar dat)
 {
     uchar i;
 
-    ET2046_CLK = 0;
     for (i = 0; i < 8; i++)
     {
         ET2046_DIN = dat >> 7;
